@@ -5,12 +5,20 @@ var correctAnswers = 0
 		if(gender === genderCorrectAnswer){
 			correctAnswers += 1
 			alert('Good guess');
+		}else if(gender === 'y'||gender ==='Y'||gender==='YES'){
+			alert('Error: Incorrect input.');
+		}else if(gender === 'n'||gender ==='N'||gender==='NO'){
+			alert('Error: Incorrect input.');
 		}
 	var birthPlace = prompt('Was I born in seattle?');
 		var birthPlaceCorrectAnswer = 'yes'
 			if(birthPlace === birthPlaceCorrectAnswer){
 				correctAnswers += 1
 				alert('Good guess');
+			}else if(birthPlace === 'y'||birthPlace ==='Y'||birthPlace==='YES'){
+				alert('Error: Incorrect input.');
+			}else if(birthPlace === 'n'||birthPlace ==='N'||birthPlace==='NO'){
+				alert('Error: Incorrect input.');
 			}
 
 	var favoriteFood = prompt('Is Pho my favorite food?');
@@ -18,6 +26,10 @@ var correctAnswers = 0
 			if(favoriteFood === favoriteFoodCorrectAnswer){
 				correctAnswers += 1
 				alert('Good guess');
+			}else if(favoriteFood === 'y'||favoriteFood === 'Y'||favoriteFood === 'YES'){
+				alert('Error: Incorrect input.');
+			}else if(favoriteFood === 'n'||favoriteFood ==='N'||favoriteFood==='NO'){
+				alert('Error: Incorrect input.');
 			}
 	console.log('Question 1 response:' + " " + gender)
 	console.log('Question 2 response:' + " " + birthPlace)
