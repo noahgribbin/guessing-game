@@ -1,18 +1,26 @@
 var name = prompt('What is your name?');
-var correctAnswers = 0	
+var correctAnswers = 0;	
+var gender;
+var birthPlace;
+var favoriteFood;
 
-var gender = prompt('Am i a boy?');
-var genderCorrectAnswer = 'yes'
+
+function question1(){
+	gender = prompt('Am i a boy?');
+genderCorrectAnswer = 'yes'
 gender=gender.toLowerCase()
 if(gender === genderCorrectAnswer||gender ==='y'){
 	correctAnswers += 1
 	alert('HEYO, good guess!');
 }else if(gender === 'n'||gender ==='no'){
-	alert('no, my hair\'s not that long is it?');	
+	alert('no, my hair\'s not that long is it?');
 }
+}
+question1();
 
-var birthPlace = prompt('Was I born in seattle?');
-var birthPlaceCorrectAnswer = 'yes'
+function question2(){
+	birthPlace = prompt('Was I born in seattle?');
+birthPlaceCorrectAnswer = 'yes'
 birthPlace=birthPlace.toLowerCase()
 if(birthPlace === birthPlaceCorrectAnswer||birthPlace === 'y'){
 	correctAnswers += 1
@@ -20,9 +28,13 @@ if(birthPlace === birthPlaceCorrectAnswer||birthPlace === 'y'){
 }else if(birthPlace === 'n'||birthPlace ==='no'){
 	alert('hmm, not quite');
 }
+}
+question2();
 
-var favoriteFood = prompt('Is Pho my favorite food?');
-var favoriteFoodCorrectAnswer = 'yes'
+
+function question3(){
+	favoriteFood = prompt('Is Pho my favorite food?');
+favoriteFoodCorrectAnswer = 'yes'
 favoriteFood=favoriteFood.toLowerCase()
 if(favoriteFood === favoriteFoodCorrectAnswer||favoriteFood === 'y'){
 	correctAnswers += 1
@@ -30,6 +42,8 @@ if(favoriteFood === favoriteFoodCorrectAnswer||favoriteFood === 'y'){
 }else if(favoriteFood === 'n'||favoriteFood ==='no'){
 	alert('Of course it is!');
 }
+}
+question3();
 
 console.log('Question 1 response: ' + gender)
 console.log('Question 2 response: ' + birthPlace)
