@@ -52,4 +52,6 @@ var correctAnswers = 0
 	if(favoriteFood !== favoriteFoodCorrectAnswer){
 		alert('Actually my favorite food is Pho');
 	}
+		alert('Thanks for playing my game ' + name +".");
+
 	
