@@ -33,9 +33,9 @@ if(favoriteFood === favoriteFoodCorrectAnswer){
 	alert('Error: Incorrect input.');
 }
 
-console.log('Question 1 response:' + " " + gender)
-console.log('Question 2 response:' + " " + birthPlace)
-console.log('Question 3 response:' + " " + favoriteFood)
+console.log('Question 1 response: ' + gender)
+console.log('Question 2 response: ' + birthPlace)
+console.log('Question 3 response: ' + favoriteFood)
 
 if(correctAnswers === 0){
 	alert('Darn none right.');
