@@ -1,35 +1,58 @@
 var name = prompt('What is your name?');
-var correctAnswers = 0	
+var correctAnswers = 0;	
+var gender;
+var birthPlace;
+var favoriteFood;
 
-var gender = prompt('Am i a boy?');
-var genderCorrectAnswer = 'yes'
-gender=gender.toLowerCase()
-if(gender === genderCorrectAnswer||gender ==='y'){
-	correctAnswers += 1
-	alert('HEYO, good guess!');
-}else if(gender === 'n'||gender ==='no'){
-	alert('no, my hair\'s not that long is it?');	
-}
+var one = document.getElementById('one');
+var two = document.getElementById('two');
+var three = document.getElementById('three');
 
-var birthPlace = prompt('Was I born in seattle?');
-var birthPlaceCorrectAnswer = 'yes'
-birthPlace=birthPlace.toLowerCase()
-if(birthPlace === birthPlaceCorrectAnswer||birthPlace === 'y'){
-	correctAnswers += 1
-	alert('how\'d you know?');
-}else if(birthPlace === 'n'||birthPlace ==='no'){
-	alert('hmm, not quite');
+function question1(){
+	gender = prompt('Am i a boy?');
+	genderCorrectAnswer = 'yes'
+	gender=gender.toLowerCase()
+	if(gender === genderCorrectAnswer||gender ==='y'){
+		correctAnswers += 1
+		one.innerHTML = 'HEYO, good guess'
+		//alert('HEYO, good guess!');
+	}else if(gender === 'n'||gender ==='no'){
+		one.innerHTML = 'no, my hair\'s not that long is it?'
+		//alert('no, my hair\'s not that long is it?');
+	}
 }
+question1();
 
-var favoriteFood = prompt('Is Pho my favorite food?');
-var favoriteFoodCorrectAnswer = 'yes'
-favoriteFood=favoriteFood.toLowerCase()
-if(favoriteFood === favoriteFoodCorrectAnswer||favoriteFood === 'y'){
-	correctAnswers += 1
-	alert('Correct! So yummy!');
-}else if(favoriteFood === 'n'||favoriteFood ==='no'){
-	alert('Of course it is!');
+function question2(){
+	birthPlace = prompt('Was I born in seattle?');
+	birthPlaceCorrectAnswer = 'yes'
+	birthPlace=birthPlace.toLowerCase()
+	if(birthPlace === birthPlaceCorrectAnswer||birthPlace === 'y'){
+		correctAnswers += 1
+		two.innerHTML = 'how\'d you know?'
+		//alert('how\'d you know?');
+	}else if(birthPlace === 'n'||birthPlace ==='no'){
+		two.innerHTML = 'hmm, not quite'
+		//alert('hmm, not quite');
+	}
 }
+question2();
+
+
+function question3(){
+	favoriteFood = prompt('Is Pho my favorite food?');
+	favoriteFoodCorrectAnswer = 'yes'
+	favoriteFood=favoriteFood.toLowerCase()
+	if(favoriteFood === favoriteFoodCorrectAnswer||favoriteFood === 'y'){
+		correctAnswers += 1
+		three.innerHTML = 'Correct! So yummy!'
+		//alert('Correct! So yummy!');
+	}else if(favoriteFood === 'n'||favoriteFood ==='no'){
+		three.innerHTML = 'Of course it is!'
+		//alert('Of course it is!');
+	}
+}
+question3();
 
 console.log('Question 1 response: ' + gender)
 console.log('Question 2 response: ' + birthPlace)
