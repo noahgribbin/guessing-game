@@ -1,0 +1,7 @@
+body{
+	/*ugly design, just setting up a bare bones style sheet*/
+	background-color:grey;
+}
+#two{
+	padding:5px 5px 5px 40px;
+}
