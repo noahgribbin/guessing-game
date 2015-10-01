@@ -1,8 +1,5 @@
 var name = prompt('What is your name?');
 var correctAnswers = 0	
-var one = document.getElementById('one');
-var two = document.getElementById('two');
-var three = document.getElementById('three');
 
 var gender = prompt('Am i a boy?');
 var genderCorrectAnswer = 'yes'
