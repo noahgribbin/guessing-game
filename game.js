@@ -1,15 +1,24 @@
 var question = ['Am i a boy?', 'Was I born in seattle?', 'Is Pho my favorite food?' ];
 var answer = ['yes','y','no','n'];
 
-var name = prompt('What is your name?');
+//var name = prompt('What is your name?');
 var correctAnswers = 0;	
 var gender;
 var birthPlace;
 var favoriteFood;
 
-var one = document.getElementById('one');
-var two = document.getElementById('two');
-var three = document.getElementById('three');
+var one = document.getElementById('a');
+var two = document.getElementById('b');
+var three = document.getElementById('c');
+
+var p1 = document.getElementById('e');
+var p2 = document.getElementById('f');
+var p3 = document.getElementById('g');
+
+var photo1 = 'img/moose.jpg'
+var photo2 = 'img/giraffe.jpg'
+var photo3 = 'img/dikdik.jpg'
+
 
 function question1(){
 	gender = prompt(question[0]);
@@ -17,7 +26,8 @@ function question1(){
 	gender=gender.toLowerCase()
 	if(gender === answer[0]||gender ===answer[1]){
 		correctAnswers += 1
-		one.innerHTML = 'HEYO, good guess'
+		one.innerHTML = 'HEYO, good guess';
+		p1.innerHTML = '<img src= '+ photo1 +' width="200" >';
 		//alert('HEYO, good guess!');
 	}else if(gender === answer[2]||gender === answer[3]){
 		one.innerHTML = 'no, my hair\'s not that long is it?'
@@ -32,7 +42,8 @@ function question2(){
 	birthPlace=birthPlace.toLowerCase()
 	if(birthPlace === answer[0]||birthPlace === answer[1]){
 		correctAnswers += 1
-		two.innerHTML = 'how\'d you know?'
+		two.innerHTML = 'how\'d you know?';
+		p2.innerHTML = '<img src= '+ photo2+' width="200" >';;
 		//alert('how\'d you know?');
 	}else if(birthPlace === answer[2]||birthPlace === answer[3]){
 		two.innerHTML = 'hmm, not quite'
@@ -48,7 +59,8 @@ function question3(){
 	favoriteFood=favoriteFood.toLowerCase()
 	if(favoriteFood === answer[0]||favoriteFood === answer[1]){
 		correctAnswers += 1
-		three.innerHTML = 'Correct! So yummy!'
+		three.innerHTML = 'Correct! So yummy!';
+        p3.innerHTML= '<img src= '+ photo3 +' width="200" >';;
 		//alert('Correct! So yummy!');
 	}else if(favoriteFood === answer[2]||favoriteFood === answer[3]){
 		three.innerHTML = 'Of course it is!'
@@ -57,9 +69,9 @@ function question3(){
 }
 question3();
 
-console.log('Question 1 response: ' + gender)
-console.log('Question 2 response: ' + birthPlace)
-console.log('Question 3 response: ' + favoriteFood)
+	//console.log('Question 1 response: ' + gender)
+	//console.log('Question 2 response: ' + birthPlace)
+	//console.log('Question 3 response: ' + favoriteFood)
 
 if(correctAnswers === 0){
 	alert('Darn none right.');
@@ -71,7 +83,7 @@ if(correctAnswers === 0){
 	alert('Ya got em all!!!');
 }
 
-	alert('Thanks for playing my game ' + name +".");
+	//alert('Thanks for playing my game ' + name +".");
 
 
 
