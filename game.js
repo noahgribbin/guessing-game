@@ -7,17 +7,17 @@ var gender;
 var birthPlace;
 var favoriteFood;
 
-var one = document.getElementById('a');
-var two = document.getElementById('b');
-var three = document.getElementById('c');
+var correct1 = document.getElementById('c1');
+var correct2 = document.getElementById('c2');
+var correct3 = document.getElementById('c3');
 
-var p1 = document.getElementById('e');
-var p2 = document.getElementById('f');
-var p3 = document.getElementById('g');
+var p1 = document.getElementById('1');
+var p2 = document.getElementById('2');
+var p3 = document.getElementById('3');
 
-var w1 = document.getElementById('w1');
-var w2 = document.getElementById('w2');
-var w3 = document.getElementById('w3');
+var wrong1 = document.getElementById('w1');
+var wrong2 = document.getElementById('w2');
+var wrong3 = document.getElementById('w3');
 
 var photo1 = 'img/moose.jpg'
 var photo2 = 'img/giraffe.jpg'
@@ -30,11 +30,11 @@ function question1(){
 	gender=gender.toLowerCase()
 	if(gender === answer[0]||gender ===answer[1]){
 		correctAnswers += 1
-		one.innerHTML = 'HEYO, good guess';
+		correct1.innerHTML = 'HEYO, good guess';
 		p1.innerHTML = '<img src= '+ photo1 +' width="200" >';
 		//alert('HEYO, good guess!');
 	}else if(gender === answer[2]||gender === answer[3]){
-		w1.innerHTML = 'no, my hair\'s not that long is it?'
+		wrong1.innerHTML = 'no, my hair\'s not that long is it?'
 		//alert('no, my hair\'s not that long is it?');
 	}
 }
@@ -46,11 +46,11 @@ function question2(){
 	birthPlace=birthPlace.toLowerCase()
 	if(birthPlace === answer[0]||birthPlace === answer[1]){
 		correctAnswers += 1
-		two.innerHTML = 'how\'d you know?';
+		correct2.innerHTML = 'how\'d you know?';
 		p2.innerHTML = '<img src= '+ photo2+' width="200" >';;
 		//alert('how\'d you know?');
 	}else if(birthPlace === answer[2]||birthPlace === answer[3]){
-		w2.innerHTML = 'hmm, not quite'
+		wrong2.innerHTML = 'hmm, not quite'
 		//alert('hmm, not quite');
 	}
 }
@@ -63,11 +63,11 @@ function question3(){
 	favoriteFood=favoriteFood.toLowerCase()
 	if(favoriteFood === answer[0]||favoriteFood === answer[1]){
 		correctAnswers += 1
-		three.innerHTML = 'Correct! So yummy!';
+		correct3.innerHTML = 'Correct! So yummy!';
         p3.innerHTML= '<img src= '+ photo3 +' width="200" >';;
 		//alert('Correct! So yummy!');
 	}else if(favoriteFood === answer[2]||favoriteFood === answer[3]){
-		w3.innerHTML = 'Of course it is!'
+		wrong3.innerHTML = 'Of course it is!'
 		//alert('Of course it is!');
 	}
 }
