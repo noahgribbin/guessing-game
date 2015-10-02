@@ -1,3 +1,6 @@
+var question = ['Am i a boy?', 'Was I born in seattle?', 'Is Pho my favorite food?' ];
+var answer = ['yes','y','no','n'];
+
 var name = prompt('What is your name?');
 var correctAnswers = 0;	
 var gender;
@@ -9,14 +12,14 @@ var two = document.getElementById('two');
 var three = document.getElementById('three');
 
 function question1(){
-	gender = prompt('Am i a boy?');
+	gender = prompt(question[0]);
 	genderCorrectAnswer = 'yes'
 	gender=gender.toLowerCase()
-	if(gender === genderCorrectAnswer||gender ==='y'){
+	if(gender === answer[0]||gender ===answer[1]){
 		correctAnswers += 1
 		one.innerHTML = 'HEYO, good guess'
 		//alert('HEYO, good guess!');
-	}else if(gender === 'n'||gender ==='no'){
+	}else if(gender === answer[2]||gender === answer[3]){
 		one.innerHTML = 'no, my hair\'s not that long is it?'
 		//alert('no, my hair\'s not that long is it?');
 	}
@@ -24,14 +27,14 @@ function question1(){
 question1();
 
 function question2(){
-	birthPlace = prompt('Was I born in seattle?');
+	birthPlace = prompt(question[1]);
 	birthPlaceCorrectAnswer = 'yes'
 	birthPlace=birthPlace.toLowerCase()
-	if(birthPlace === birthPlaceCorrectAnswer||birthPlace === 'y'){
+	if(birthPlace === answer[0]||birthPlace === answer[1]){
 		correctAnswers += 1
 		two.innerHTML = 'how\'d you know?'
 		//alert('how\'d you know?');
-	}else if(birthPlace === 'n'||birthPlace ==='no'){
+	}else if(birthPlace === answer[2]||birthPlace === answer[3]){
 		two.innerHTML = 'hmm, not quite'
 		//alert('hmm, not quite');
 	}
@@ -40,14 +43,14 @@ question2();
 
 
 function question3(){
-	favoriteFood = prompt('Is Pho my favorite food?');
+	favoriteFood = prompt(question[2]);
 	favoriteFoodCorrectAnswer = 'yes'
 	favoriteFood=favoriteFood.toLowerCase()
-	if(favoriteFood === favoriteFoodCorrectAnswer||favoriteFood === 'y'){
+	if(favoriteFood === answer[0]||favoriteFood === answer[1]){
 		correctAnswers += 1
 		three.innerHTML = 'Correct! So yummy!'
 		//alert('Correct! So yummy!');
-	}else if(favoriteFood === 'n'||favoriteFood ==='no'){
+	}else if(favoriteFood === answer[2]||favoriteFood === answer[3]){
 		three.innerHTML = 'Of course it is!'
 		//alert('Of course it is!');
 	}
