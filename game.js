@@ -15,6 +15,10 @@ var p1 = document.getElementById('e');
 var p2 = document.getElementById('f');
 var p3 = document.getElementById('g');
 
+var w1 = document.getElementById('w1');
+var w2 = document.getElementById('w2');
+var w3 = document.getElementById('w3');
+
 var photo1 = 'img/moose.jpg'
 var photo2 = 'img/giraffe.jpg'
 var photo3 = 'img/dikdik.jpg'
@@ -30,7 +34,7 @@ function question1(){
 		p1.innerHTML = '<img src= '+ photo1 +' width="200" >';
 		//alert('HEYO, good guess!');
 	}else if(gender === answer[2]||gender === answer[3]){
-		one.innerHTML = 'no, my hair\'s not that long is it?'
+		w1.innerHTML = 'no, my hair\'s not that long is it?'
 		//alert('no, my hair\'s not that long is it?');
 	}
 }
@@ -46,7 +50,7 @@ function question2(){
 		p2.innerHTML = '<img src= '+ photo2+' width="200" >';;
 		//alert('how\'d you know?');
 	}else if(birthPlace === answer[2]||birthPlace === answer[3]){
-		two.innerHTML = 'hmm, not quite'
+		w2.innerHTML = 'hmm, not quite'
 		//alert('hmm, not quite');
 	}
 }
@@ -63,7 +67,7 @@ function question3(){
         p3.innerHTML= '<img src= '+ photo3 +' width="200" >';;
 		//alert('Correct! So yummy!');
 	}else if(favoriteFood === answer[2]||favoriteFood === answer[3]){
-		three.innerHTML = 'Of course it is!'
+		w3.innerHTML = 'Of course it is!'
 		//alert('Of course it is!');
 	}
 }
